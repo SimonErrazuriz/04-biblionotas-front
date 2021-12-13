@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@font-face {
+  font-family: cinzel;
+  src: url(assets/fonts/cinzel/Cinzel-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: redhands;
+  src: url(assets/fonts/redhands/KGRedHands.ttf) format("opentype");
+}
+@font-face {
+  font-family: redhands2;
+  src: url(assets/fonts/redhands/KGRedHandsOutline.ttf) format("opentype");
+}
+body {
+  background-image: url("./assets/img/fondo.jpg");
+  background-attachment: fixed;
+}

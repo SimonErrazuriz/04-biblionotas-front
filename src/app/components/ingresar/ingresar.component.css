@@ -1,0 +1,19 @@
+.validation-form {
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 15px;
+}
+.carousel {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.carousel-caption {
+  color: white;
+  background-color: #567895;
+  font-family: cinzel;
+}
+
+.carousel .carousel-item {
+  height: 400px;
+}

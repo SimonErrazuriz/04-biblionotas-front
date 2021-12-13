@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-8">
+            <div class="card">
+                <h2 class="card-header">Crear usuario</h2>
+                <div class="card-body">
+                    <form #usuarioForm="ngForm" (ngSubmit)="addUsuario(usuarioForm)">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" name="name" id="name" ngModel #name="ngModel"
+                                required>
+                            <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                                class="alert alert-danger mt-3 validation-form" role="alert">
+                                <div *ngIf="name.errors?.['required']">
+                                    El nombre es requerido.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" name="email" id="email" ngModel #email="ngModel"
+                                required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                                class="alert alert-danger mt-3 validation-form" role="alert">
+                                <div *ngIf="email.errors?.['required']">
+                                    El email es requerido.
+                                </div>
+                                <div *ngIf="email.errors?.['pattern']">
+                                    El email no es válido.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" name="password" id="password" ngModel
+                                #password="ngModel" required minlength="4" aria-describedby="passwordHelpBlock">
+                            <div id="passwordHelpBlock" class="form-text">
+                                Tu contraseña debe tener mínimo 4 caracteres
+                            </div>
+                            <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                                class="alert alert-danger mt-3 validation-form" role="alert">
+                                <div *ngIf="password.errors?.['required']">
+                                    La contraseña es requerida.
+                                </div>
+                                <div *ngIf="password.errors?.['minlength']">
+                                    Inferior al mínimo de caracteres.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirmar contraseña:</label>
+                            <input type="password" class="form-control" name="confirmPassword" id="confirmPassword"
+                                ngModel #confirmPassword="ngModel" required>
+                            <div *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)"
+                                class="alert alert-danger mt-3 validation-form" role="alert">
+                                <div *ngIf="confirmPassword.errors?.['required']">
+                                    La confirmación de la contraseña es requerida.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" class="btn btn-primary" value="Registrarse"
+                                [disabled]="!usuarioForm.form.valid">
+                        </div>
+                    </form>
+                    <div *ngIf="status">
+                        <div class="alert alert-danger alert-dismissible mt-3" role="alert">
+                            <strong>{{status}}</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+<div class="card">
+                <h2 class="card-header">Ingresar usuario</h2>
+                <div class="card-body">
+                    <form #usuarioForm="ngForm" (ngSubmit)="logUsuario(usuarioForm)">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" name="email" id="email" ngModel>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" name="password" id="password" ngModel>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </form>
+                </div>
+            </div>
+
+-->

@@ -1,0 +1,11 @@
+<div class="container" *ngIf="ficha">
+    <div class="row mt-5">
+        <h1>{{ficha.title}}</h1>
+    </div>
+    <div class="row mt-3">
+        <p>{{ficha.description}}</p>
+    </div>
+    <div class="row mt-3">
+        <ckeditor [editor]="Editor" [(ngModel)]="ficha.content" (change)="onChange($event)"></ckeditor>
+    </div>
+</div>

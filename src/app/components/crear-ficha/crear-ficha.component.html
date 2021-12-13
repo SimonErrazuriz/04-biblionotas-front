@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-8">
+            <div class="card">
+                <h2 class="card-header">Crear Ficha</h2>
+                <div class="card-body">
+                    <form #fichaForm="ngForm" (ngSubmit)="addFicha(fichaForm)">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Título</label>
+                            <input type="text" class="form-control" name="title" id="title" ngModel #title="ngModel"
+                                required>
+                            <div *ngIf="title.invalid && (title.dirty || title.touched)"
+                                class="alert alert-danger mt-3 validation-form" role="alert">
+                                <div *ngIf="title.errors?.['required']">
+                                    El título es requerido.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Descripción</label>
+                            <input type="text" class="form-control" name="description" id="description" ngModel
+                                #description="ngModel" required>
+                            <div *ngIf="description.invalid && (description.dirty || description.touched)"
+                                class="alert alert-danger mt-3 validation-form" role="alert">
+                                <div *ngIf="description.errors?.['required']">
+                                    La descripción es requerida.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" class="btn btn-primary" value="Guardar"
+                                [disabled]="!fichaForm.form.valid">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
