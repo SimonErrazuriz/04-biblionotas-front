@@ -6,7 +6,7 @@ import { Ficha } from '../models/fichas';
   providedIn: 'root'
 })
 export class FichasService {
-  url_api = 'http://localhost:3000/api/fichas';
+  url_api = 'https://biblionotas.herokuapp.com/api/fichas';
   constructor(private _http: HttpClient) { }
 
   getFichas() {

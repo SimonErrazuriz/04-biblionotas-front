@@ -6,7 +6,7 @@ import { Usuario } from '../models/usuarios';
   providedIn: 'root'
 })
 export class UsuariosService {
-  url_api = 'http://localhost:3000/api/usuarios';
+  url_api = 'https://biblionotas.herokuapp.com/api/usuarios';
   constructor(private _http: HttpClient) { }
 
   addUsuario(usuario: Usuario) {
