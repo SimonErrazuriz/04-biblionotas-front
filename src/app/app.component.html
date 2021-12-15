@@ -1,16 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <img src="./assets/img/book.png" width="4%">
-        <h1 class="navbar-brand mx-3 logo">Biblionotas</h1>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent ">
+        <img src="./assets/img/book.png " class="logo-img">
+        <h1 class="navbar-brand mx-3 logo-letters">Biblionotas</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
                 <div *ngIf="identificado; then siIdentificado"></div>
                 <ng-template #siIdentificado>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" routerLinkActive="activo" [routerLink]="['/fichas']">Mis fichas</a>
+                        <a class="nav-link " aria-current="page" routerLinkActive="activo"
+                            [routerLink]="['/fichas']">Mis
+                            fichas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" routerLinkActive="activo" [routerLink]="['/crear-ficha']">Crear ficha</a>
+                        <a class="nav-link " aria-current="page" routerLinkActive="activo"
+                            [routerLink]="['/crear-ficha']">Crear ficha</a>
                     </li>
                 </ng-template>
             </ul>
@@ -18,10 +25,12 @@
                 <div *ngIf="!identificado; then noIdentificado; else cerrarSesion"></div>
                 <ng-template #noIdentificado>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" routerLinkActive="activo" [routerLink]="['/ingresar']">Ingresar</a>
+                        <a class="nav-link " aria-current="page" routerLinkActive="activo"
+                            [routerLink]="['/ingresar']">Ingresar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" routerLinkActive="activo" [routerLink]="['/crear-usuario']">Registrarse</a>
+                        <a class="nav-link " aria-current="page" routerLinkActive="activo"
+                            [routerLink]="['/crear-usuario']">Registrarse</a>
                     </li>
                 </ng-template>
                 <ng-template #cerrarSesion>

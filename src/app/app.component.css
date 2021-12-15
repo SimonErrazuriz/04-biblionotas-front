@@ -2,10 +2,20 @@
   background-color: #f0f8ff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
-.logo {
+.logo-img {
+  max-width: 45px;
+  min-width: 21px;
+}
+.logo-letters {
   font-family: "cinzel";
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.75);
 }
 .activo {
-  background-color:  beige;
-  border-radius: 15px;  
+  background-color: beige;
+  border-radius: 15px;
+}
+.nav-link {
+  font-weight: bold;
 }
