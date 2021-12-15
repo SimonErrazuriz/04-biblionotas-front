@@ -16,3 +16,6 @@
   background-color: beige;
   border-radius: 15px;
 }
+.nav-link {
+  font-weight: bold;
+}
