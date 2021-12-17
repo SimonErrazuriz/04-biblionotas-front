@@ -1,14 +1,19 @@
 # Biblionotas
 
 Aplicación web para organizar digitalmente fichas de estudio.  
-Link: https://biblionotas.netlify.app/  
+Link: [Biblionotas](https://biblionotas.netlify.app/)  
 
 Ventajas:
 - Acceso desde cualquier dispositivo
 - Funciones de busqueda (en desarrollo)
 - Funciones de edición (en desarrollo)
 
-## Instrucciones de uso:
+## Construido con 🛠️
+
+- MEAN Stack
+- [CKeditor](https://ckeditor.com/)
+
+## Instrucciones de uso 📖
 
 ### Ingreso
 Puedes ingresar con un usuario de prueba para conocer el sitio, también puedes registrarte.  
