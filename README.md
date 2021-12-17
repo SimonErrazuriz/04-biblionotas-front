@@ -25,7 +25,7 @@ Luego de crear la ficha, puedes ingresar a trabajarla seleccionando el ícono de
 
 ### Desarrollar ficha
 Ya puedes comenzar a escribir tus apuntes, resumenes, y cualquier contenido que sirva para el registro de estudios!!!  
-Actualmente posee una función de autoguardado, cada cambió se almacenará automáticamente.
+Actualmente posee una función de autoguardado, cada cambio se almacenará automáticamente.
 
 ![WindowTop_3Y2fr4vOTv](https://user-images.githubusercontent.com/82824344/146619440-4c709886-2a90-420f-9758-b91fa145db68.png)
 
