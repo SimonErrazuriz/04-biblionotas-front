@@ -72,6 +72,8 @@
                         <button type="submit" class="btn btn-primary"
                             [disabled]="!usuarioForm.form.valid">Ingresar</button>
                     </form>
+                    <button type="button" class="btn btn-success mt-2" aria-current="page"
+                        [routerLink]="['/crear-usuario']">Registrarse</button>
                     <div *ngIf="status">
                         <div class="alert alert-danger alert-dismissible mt-3" role="alert">
                             <strong>{{status}}</strong>
