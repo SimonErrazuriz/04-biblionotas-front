@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class IngresarComponent implements OnInit {
   public status!: String;
+  public loading!: Boolean;
 
   constructor(
     private usuariosService: UsuariosService,
@@ -19,9 +20,11 @@ export class IngresarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.loading = false;
   }
 
   logUsuario(usuarioForm: NgForm) {
+    this.loading = true;
     this.usuariosService.logUsuario(usuarioForm.value).subscribe(
       (res: any) => {
         localStorage.setItem('token', res.token);

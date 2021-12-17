@@ -30,6 +30,9 @@
                         <div class="mb-3">
                             <input type="submit" class="btn btn-primary" value="Guardar"
                                 [disabled]="!fichaForm.form.valid">
+                            <div *ngIf="loading" class="d-inline">
+                                <img src="..\assets\img\loading.gif" class="loading-icon">
+                            </div>
                         </div>
                     </form>
                 </div>

@@ -71,6 +71,9 @@
                         </div>
                         <button type="submit" class="btn btn-primary"
                             [disabled]="!usuarioForm.form.valid">Ingresar</button>
+                        <div *ngIf="loading" class="d-inline">
+                            <img src="..\assets\img\loading.gif" class="loading-icon">
+                        </div>
                     </form>
                     <button type="button" class="btn btn-success mt-2" aria-current="page"
                         [routerLink]="['/crear-usuario']">Registrarse</button>

@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class FichasComponent implements OnInit {
   public fichas!: Ficha[];
+  public loading!: Boolean;
 
   constructor(
     private fichasServices: FichasService,
@@ -18,6 +19,7 @@ export class FichasComponent implements OnInit {
 
   ngOnInit(): void {
     this.getFichas();
+    this.loading = false;
   }
 
   getFichas() {
@@ -28,6 +30,7 @@ export class FichasComponent implements OnInit {
 
   deleteFicha(id: string) {
     if (confirm('¿Estás seguro? ')) {
+      this.loading = true;
       this.fichasServices.deleteFicha(id).subscribe(
         res => {
           console.log(res);

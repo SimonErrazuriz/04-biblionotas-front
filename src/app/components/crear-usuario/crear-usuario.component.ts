@@ -11,16 +11,20 @@ import { Router } from '@angular/router';
 })
 export class CrearUsuarioComponent implements OnInit {
   public status!: String;
+  public loading!: Boolean;
+
   constructor(
     private usuariosService: UsuariosService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.loading = false;
   }
 
   addUsuario(usuarioForm: NgForm) {
     if (usuarioForm.value.password === usuarioForm.value.confirmPassword) {
+      this.loading = true;
       this.usuariosService.addUsuario(usuarioForm.value).subscribe(
         (res: any) => {
           console.log(res);

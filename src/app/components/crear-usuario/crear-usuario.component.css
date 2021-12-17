@@ -1,5 +1,11 @@
 .validation-form {
-    height: 30px;
-    line-height: 30px;
-    padding:0px 15px;
-  }
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 15px;
+}
+
+.loading-icon {
+  width: 35px;
+  margin-left: 3px;
+  margin-top: -6px;
+}

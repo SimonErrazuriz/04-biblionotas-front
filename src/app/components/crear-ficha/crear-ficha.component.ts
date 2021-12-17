@@ -10,16 +10,19 @@ import { Router } from '@angular/router';
   providers: [FichasService]
 })
 export class CrearFichaComponent implements OnInit {
+  public loading!: Boolean;
 
   constructor(
     private fichasService: FichasService,
     private router: Router) { }
 
   ngOnInit(): void {
+    this.loading = false;
   }
 
 
   addFicha(fichaForm: NgForm) {
+    this.loading = true;
     this.fichasService.addFicha(fichaForm.value).subscribe(
       res => {
         console.log(res);
