@@ -33,6 +33,7 @@ export class IngresarComponent implements OnInit {
       err => {
         console.log(err);
         this.status = err.error.message;
+        this.loading = false;
       }
     );
   }

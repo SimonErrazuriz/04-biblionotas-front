@@ -33,6 +33,7 @@ export class CrearUsuarioComponent implements OnInit {
         },
         err => {
           this.status = err.error.message;
+          this.loading = false;
         }
       );
     } else {

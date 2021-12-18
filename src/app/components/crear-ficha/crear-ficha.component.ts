@@ -28,7 +28,10 @@ export class CrearFichaComponent implements OnInit {
         console.log(res);
         this.router.navigate(['/fichas']);
       },
-      err => console.log(err)
+      err => {
+        console.log(err);
+        this.loading = false;
+      }
     );
   }
 }

@@ -36,7 +36,10 @@ export class FichasComponent implements OnInit {
           console.log(res);
           this.getFichas();
         },
-        err => console.log(err)
+        err => {
+          console.log(err);
+          this.loading = false;
+        }
       );
     }
   }
